@@ -69,14 +69,14 @@ const Login = () => {
                             <div className='flex justify-center'>
                                 <button type='button' className='bg-[#ffffff] text-[#858585] text-xs px-4 py-2 
                                 rounded mr-6 flex items-center'>
-                                    <img src={google} width={12} className="mr-2" />
+                                    <img src={google} width={12} className="mr-2" alt="google-icon" />
                                     <span className='text-sm'>Sign in with Google</span>
                                 </button>
 
                                 <div>
                                     <button type='button' className='bg-[#ffffff] text-[#858585] text-xs px-4 py-2 
                                     rounded flex items-center'>
-                                        <img src={apple} width={18} className="mr-1" />
+                                        <img src={apple} width={18} className="mr-1" alt="apple-icon" />
                                         <span className='pl-2 text-sm'>Sign in with Apple</span>
                                     </button>
                                 </div>
@@ -126,13 +126,13 @@ const Login = () => {
                     <p className='text-base font-normal text-[#000000] pt-[5px] pb-[20px] text-left pl-[28px]'>Sign in to your account</p>
                     <div className='flex justify-center'>
                         <button type='button' className='bg-[#ffffff] text-[#858585] text-xs px-4 py-2 rounded mr-6 flex items-center'>
-                            <img src={google} width={12} className="mr-2" />
+                            <img src={google} width={12} className="mr-2" alt="google-icon" />
                             <span className='text-sm'>Sign in with Google</span>
                         </button>
 
                         <div>
                             <button type='button' className='bg-[#ffffff] text-[#858585] text-xs px-4 py-2 rounded flex items-center'>
-                                <img src={apple} width={18} className="mr-1" />
+                                <img src={apple} width={18} className="mr-1" alt="apple-icon" />
                                 <span className='pl-2 text-sm'>Sign in with Apple</span>
                             </button>
                         </div>
@@ -194,7 +194,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
