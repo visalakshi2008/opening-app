@@ -1,151 +1,3 @@
-// import React, { useState } from 'react';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEye } from "@fortawesome/free-solid-svg-icons";
-// import logo from "../assets/logo-black-updated.png";
-// import gitHub from "../assets/github.png";
-// import linkedin from "../assets/linkedin.png";
-// import twitter from "../assets/twitter.png";
-// import discord from "../assets/discord.png";
-// import Uploading from './Uploading';
-
-// const Login = () => {
-//     const [loggedIn, setLoggedIn] = useState(false);
-//     const [email, setEmail] = useState('');
-//     const [password, setPassword] = useState('');
-//     const [error, setError] = useState('');
-
-//     const handleSignIn = (event) => {
-//         event.preventDefault();
-//         setLoggedIn(true);
-//     };
-
-//     return (
-//         <div className='h-screen flex flex-col w-full'>
-//             {loggedIn ? (
-//                 <Uploading />
-//             ) : (
-//                 <div>
-//                     <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen'>
-//                         <div className='flex justify-between items-center p-4'>
-//                             <div className='hidden sm:block'>
-//                                 <img src={logo} alt="Logo" width={80} />
-//                             </div>
-//                             <div className='block sm:hidden flex flex-row justify-center items-center'>
-//                                 <img src={logo} alt="Logo" width={30} className='block sm:hidden' />
-//                                 <p className='text-2xl font-semibold text-[#ffffff] pl-3 text-center'>Base</p>
-//                             </div>
-//                         </div>
-//                         <div className='flex-grow p-4 sm:flex items-center justify-center'>
-//                             <p className='text-white text-7xl font-bold hidden sm:block' style={{ fontFamily: "Montserrat" }}>
-//                                 BASE
-//                             </p>
-//                         </div>
-//                         <div className='flex justify-center items-center pb-[70px]'>
-//                             <div className='flex justify-center gap-[38px]'>
-//                                 <img src={gitHub} alt="GitHub" width={40} />
-//                                 <img src={twitter} alt="Twitter" width={40} />
-//                                 <img src={linkedin} alt="LinkedIn" width={40} />
-//                                 <img src={discord} alt="Discord" width={40} />
-//                             </div>
-//                         </div>
-//                     </div>
-//                     <div className='bg-[#F8FAFF] w-full sm:w-1/2 sm:flex items-center sm:justify-center hidden sm:block'>
-//                         <div className='text-left'>
-//                             <p className='font-bold text-2xl sm:text-4xl'>Sign In</p>
-//                             <p className='text-base font-normal text-[#000000] pt-5 pb-20'>Sign in to your account</p>
-//                             <form onSubmit={handleSignIn}>
-//                                 <div className="text-red-500 mb-4">
-//                                     {error}
-//                                 </div>
-//                                 <div className="mb-4">
-//                                     <label className="block text-gray-600 text-sm font-medium mb-2" htmlFor="email">Email address</label>
-//                                     <input
-//                                         type="text"
-//                                         id="email"
-//                                         value={email}
-//                                         onChange={(e) => setEmail(e.target.value)}
-//                                         className="w-full border p-2 rounded focus:outline-none bg-[#F5F5F5]"
-//                                         placeholder="johndoe@example.com"
-//                                     />
-//                                 </div>
-//                                 <div className="mb-4">
-//                                     <label className="block text-gray-600 text-sm font-medium mb-2" htmlFor="password">Password</label>
-//                                     <input
-//                                         type="password"
-//                                         id="password"
-//                                         value={password}
-//                                         onChange={(e) => setPassword(e.target.value)}
-//                                         className="w-full border p-2 rounded focus:outline-none bg-[#F5F5F5]"
-//                                         placeholder="password"
-//                                     />
-//                                 </div>
-//                                 <div className='w-full pt-21'>
-//                                     <button type='submit' className='bg-[#346BD4] text-[#ffffff] text-base font-bold w-full focus:outline-none border py-2.5 rounded-lg'>
-//                                         Sign In
-//                                     </button>
-//                                 </div>
-//                             </form>
-//                         </div>
-//                     </div>
-//                 </div>
-//             )}
-//             <div className='sm:bg-[#F8FAFF] w-full items-center justify-center block sm:hidden'>
-//                 <div>
-//                     <p className='font-bold text-2xl sm:text-4xl text-center pt-2'>Sign In</p>
-//                     <p className='text-base font-normal text-[#000000] pt-[5px] pb-[20px] text-center'>Sign in to your account</p>
-//                     <div className='flex justify-center'>
-//                         <button type='button' className='bg-[#ffffff] text-[#858585] text-xs px-4 py-2 rounded mr-6'>
-//                             <FontAwesomeIcon icon={faEye} />
-//                             <span className='pl-2 text-sm'>Sign in with Google</span>
-//                         </button>
-//                         <div>
-//                             <button type='button' className='bg-[#ffffff] text-[#858585] text-xs px-4 py-2 rounded'>
-//                                 <FontAwesomeIcon icon={faEye} />
-//                                 <span className='pl-2 text-sm'>Sign in with Apple</span>
-//                             </button>
-//                         </div>
-//                     </div>
-//                     <div className='mt-10 rounded-[20px] px-6 py-4 mx-auto w-[80%]'>
-//                         <form onSubmit={handleSignIn}>
-//                             <div className="text-red-500 mb-4">
-//                                 {error}
-//                             </div>
-//                             <div className="mb-4">
-//                                 <label className="block text-gray-600 text-sm font-medium mb-2" htmlFor="email">Email address</label>
-//                                 <input
-//                                     type="text"
-//                                     id="email"
-//                                     value={email}
-//                                     onChange={(e) => setEmail(e.target.value)}
-//                                     className="w-full border p-2 rounded focus:outline-none bg-[#F5F5F5]"
-//                                     placeholder="johndoe@example.com"
-//                                 />
-//                             </div>
-//                             <div className="mb-4">
-//                                 <label className="block text-gray-600 text-sm font-medium mb-2" htmlFor="password">Password</label>
-//                                 <input
-//                                     type="password"
-//                                     id="password"
-//                                     value={password}
-//                                     onChange={(e) => setPassword(e.target.value)}
-//                                     className="w-full border p-2 rounded focus:outline-none bg-[#F5F5F5]"
-//                                     placeholder="password"
-//                                 />
-//                             </div>
-//                             <div className='w-full pt-[21px]'>
-//                                 <button type='submit' className='bg-[#346BD4] text-[#ffffff] text-base font-bold w-full focus:outline-none border py-2.5 rounded-lg'>
-//                                     Sign In
-//                                 </button>
-//                             </div>
-//                         </form>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default Login;
 import React, { useState } from 'react';
 import logo from "../assets/logo-black-updated.png";
 import gitHub from "../assets/github.png";
@@ -168,14 +20,13 @@ const Login = () => {
 
     const handleSignIn = (event) => {
         event.preventDefault();
-        // Check if the username and password are correct
+
         if (email === 'admin' && password === 'admin') {
-            // Store the login status in local storage
+
             localStorage.setItem('loggedIn', true);
-            // Set loggedIn state to true
+
             setLoggedIn(true);
         } else {
-            // If the username or password is incorrect, display an error message
             setError('Invalid username or password');
         }
     };

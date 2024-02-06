@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import uploadSvg from "../assets/uploadSvg.png"
-import menuIcon from "../assets/menuIcon.png"
-import { faEye, faSpinner, faGoogle, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Uploading from './Uploading'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import bellIcon from "../assets/bellIcon.png"
 import profile from "../assets/profile.png"
 import logo from "../assets/logo.jpg"
+import navIcon from "../assets/navIcon.png"
 const SideMenuUpload = () => {
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -19,34 +18,21 @@ const SideMenuUpload = () => {
             <div className='w-full block sm:h-screen  sm:flex  '>
                 <div className='w-full  sm:w-[18%]  p-4 h-[80px] sm:h-screen  bg-[#f5f5f5]'>
                     <div className="container mx-auto flex items-center justify-between">
-                        <div className='flex w-full justify-between'>
-                            <ol className='hidden sm:block'>
-                                <li className="text-[#030229] text-2xl font-semibold py-[40px] px-[60px] ">Base</li>
-                            </ol>
-                        </div>
                     </div>
-                    {/* mobile header with menu */}
-                    <div >
-                        <ol className='block sm:hidden  flex justify-between '>
+                    <div className='pb-[30px]'>
+                        <ol className=' flex justify-between  '>
+                            {/* mobile menu */}
                             <div className=' flex gap-4 items-center '>
-                                <div>
-                                    {/* Menu Icon */}
-                                    <button onClick={toggleDrawer} >
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                                        </svg>
-                                    </button>
-
+                                <div className=' bg-green-500 '>
                                     {/* Drawer */}
-                                    <div className={`fixed inset-0 overflow-hidden z-50 bg-gray-800 bg-opacity-50 transition-opacity duration-300 ${isDrawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                                    <div className={`fixed inset-0 overflow-hidden z-50 bg-gray-800 bg-opacity-50 transition-opacity 
+                                    duration-300 ${isDrawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                                         <div className="absolute inset-y-0 left-0 w-64 bg-white shadow-lg pt-[30px] ">
                                             {/* Close Icon */}
                                             <button className="absolute  right-4" onClick={toggleDrawer}>
                                                 <FontAwesomeIcon icon={faTimes} className="text-gray-600 text-3xl" />
                                             </button>
                                             <div className=' flex gap-3 pl-3 top-4'>
-                                                <img src={logo} width={30} alt="Menu Icon" />
                                                 <p className='text-xl font-semibold text-[#000000]'>Base</p></div>
                                             {/* Drawer content */}
                                             <div className=' flex flex-col gap-4 items-center p-4'>
@@ -139,17 +125,24 @@ const SideMenuUpload = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <li><FontAwesomeIcon icon={faEye} className='text-white text-2xl block sm:hidden' /></li>
+                                <li>
+                                    <img src={navIcon} width={20} alt='menu' onClick={toggleDrawer} className='block sm:hidden' />
+                                </li>
+                                <li >
+                                    <img src={logo} width={20} alt='menu' />
+                                </li>
+
+
                                 <p className='text-xl font-semibold text-[#000000]'>Base</p>
 
                             </div>
-                            <div className=' flex  pr-3 gap-5 items-center'>
+                            <div className=' flex  pr-3 gap-5 items-center block sm:hidden'>
                                 <li><img src={bellIcon} width={20} alt="Bell Icon" /></li>
                                 <li><img src={profile} width={30} alt="Profile" /></li>
                             </div>
                         </ol>
                     </div>
-                    {/* web menubar start */}
+
                     <div className=" flex px-[50px] hidden  sm:block  ">
                         <ul class="space-y-2 font-medium">
                             <li className='pb-[10px] '>
