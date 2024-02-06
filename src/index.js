@@ -5,6 +5,7 @@ import Login from './components/Login';
 import SideMenuUpload from './components/SideMenuUpload';
 import reportWebVitals from './reportWebVitals';
 
+
 const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
 console.log(isLoggedIn, "loggedin")
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +16,7 @@ root.render(
 
 
   </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
