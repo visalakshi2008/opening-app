@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import bellIcon from "../assets/bellIcon.png";
+
 import profile from "../assets/profile.png";
 import Papa from "papaparse";
 import UploadsTableData from './UploadsTableData';
 import xlIcon from "../assets/xlIcon.png"
 import uploadIcon from "../assets/uploadIcon.png"
+import notification from "../assets/notification.png"
 
 const Uploading = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -57,7 +58,7 @@ const Uploading = () => {
                 {/* mobile view header */}
 
                 <div className=' flex justify-between items-center text-center space-x-2 gap-3 sm:flex hidden sm:block'>
-                    <img src={bellIcon} width={18} alt="Bell Icon" />
+                    <img src={notification} width={18} alt="Bell Icon" />
                     <img src={profile} width={30} alt="Profile" />
                 </div>
             </div>

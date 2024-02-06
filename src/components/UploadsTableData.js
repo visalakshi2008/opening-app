@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import dropdown from "../assets/dropdown.png"
+import close from "../assets/close.png"
+
 
 const UploadsTableData = ({ data }) => {
     const [selectedTags, setSelectedTags] = useState({});
@@ -59,11 +62,7 @@ const UploadsTableData = ({ data }) => {
                                                 Select Tags
                                             </span>
                                             <button className="absolute right-0 top-1/2 transform -translate-y-1/2" onClick={() => handleDropdownToggle(index)}>
-                                                {/* SVG icon for dropdown */}
-                                                <svg className="w-6 h-6 fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <path fill="none" d="M0 0h24v24H0z" />
-                                                    <path d="M7 10l5 5 5-5H7z" />
-                                                </svg>
+                                                <img src={dropdown} alt="dropdown" width="10px" />
                                             </button>
 
                                             <div className={`absolute bg-white border border-gray-200 shadow-md rounded mt-1 right-0 ${isDropdownOpen[index] ? 'block' : 'hidden'}`} style={{ zIndex: 10 }}>
@@ -74,9 +73,6 @@ const UploadsTableData = ({ data }) => {
                                                 ))}
                                             </div>
 
-
-
-
                                         </div>
                                     </div>
                                 </td>
@@ -86,10 +82,7 @@ const UploadsTableData = ({ data }) => {
                                             <span key={tagIndex} className="text-white bg-[#605BFF] px-2 py-1 rounded-lg flex items-center">
                                                 {tag}
                                                 <button className="ml-1" onClick={() => handleTagRemoval(tag, index)}>
-                                                    {/* SVG icon for cross */}
-                                                    <svg className="w-3 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                        <path fillRule="evenodd" d="M2.647 2.646a1 1 0 0 1 1.415 0L10 8.586l6.938-6.939a1 1 0 0 1 1.415 1.415L11.414 10l6.939 6.938a1 1 0 0 1-1.415 1.415L10 11.414l-6.938 6.939a1 1 0 0 1-1.415-1.415L8.586 10 1.647 3.062a1 1 0 0 1 0-1.416z" />
-                                                    </svg>
+                                                    <img src={close} alt="close" />
                                                 </button>
                                             </span>
                                         ))}
