@@ -62,7 +62,7 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='bg-[#F8FAFF] w-full sm:w-1/2 sm:flex items-center sm:justify-center hidden sm:block bg-green-500'>
+                    <div className='bg-[#F8FAFF] w-full sm:w-1/2 sm:flex items-center sm:justify-center hidden sm:block'>
                         <div className='text-left w-[65%]'>
                             <p className='font-bold text-2xl sm:text-4xl'>Sign In</p>
                             <p className='text-base font-normal text-[#000000] pt-5 pb-[27px]'>Sign in to your account</p>

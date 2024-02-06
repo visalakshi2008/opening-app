@@ -29,7 +29,7 @@ const SideMenuUpload = () => {
                         <ol className=' flex justify-between  '>
                             {/* mobile menu */}
                             <div className=' flex gap-4 items-center '>
-                                <div className=' bg-green-500 '>
+                                <div>
                                     {/* Drawer */}
                                     <div className={`fixed inset-0 overflow-hidden z-50 bg-gray-800 bg-opacity-50 transition-opacity 
                                     duration-300 ${isDrawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
