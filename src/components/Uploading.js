@@ -1,30 +1,61 @@
 import React, { useState } from 'react';
 import bellIcon from "../assets/bellIcon.png";
 import profile from "../assets/profile.png";
-import menuIcon from "../assets/menuIcon.png"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { faEye, faSpinner, faGoogle } from "@fortawesome/free-solid-svg-icons";
+import Papa from "papaparse";
+import UploadsTableData from './UploadsTableData';
 
 const Uploading = () => {
     const [selectedFile, setSelectedFile] = useState(null);
+    const [csvData, setCsvData] = useState([]);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
-        // Handle the selected file
+
         console.log("Selected File:", file);
         setSelectedFile(file);
     };
 
     const handleRemoveFile = () => {
         setSelectedFile(null);
+        setCsvData([]);
+    };
+
+    const csvFileToArray = string => {
+        const csvHeader = string.slice(0, string.indexOf("\n")).split(",");
+        const csvRows = string.slice(string.indexOf("\n") + 1).split("\n");
+
+        const array = csvRows.map(i => {
+            const values = i.split(",");
+            const selectTags = values[csvHeader.indexOf("select tags")].split(/,\s*/);
+            const obj = csvHeader.reduce((object, header, index) => {
+
+                object[header] = header === "select tags" ? selectTags : values[index];
+                return object;
+            }, {});
+            return obj;
+        });
+
+        setCsvData(array);
+    };
+
+
+    const parseCSV = (file) => {
+
+        Papa.parse(file, {
+            header: true,
+            skipEmptyLines: true,
+            complete: function (results) {
+                console.log("papa parse", results.data)
+                setCsvData(results.data)
+            },
+        });
+
     };
 
     const handleUpload = () => {
-        // Handle the file upload logic
         if (selectedFile) {
             console.log("Uploading file:", selectedFile);
-            // Add your logic for file upload here
+            parseCSV(selectedFile)
         } else {
             console.log("No file selected");
         }
@@ -68,7 +99,7 @@ const Uploading = () => {
                             type="file"
                             id='uploadFile1'
                             className="hidden"
-                            accept=".xlsx, .xls"
+                            accept=".xlsx, .xls, .csv"
                             onChange={handleFileChange}
                         />
                     </label>
@@ -86,7 +117,9 @@ const Uploading = () => {
                     </div>
                 </div>
             </div>
+            <UploadsTableData data={csvData} />
         </>
+
     );
 };
 

@@ -2,20 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import reportWebVitals from './reportWebVitals';
 import Login from './components/Login';
 
 import UploadsTableData from './components/UploadsTableData';
 import Uploading from './components/Uploading';
 import SideMenuUpload from './components/SideMenuUpload';
+import DummyDataLogin from './components/DummyDataLogin';
+import reportWebVitals from './reportWebVitals';
+
+const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    {/* <Login /> */}
+    {isLoggedIn ? null : <Login />}
+
+    {/* <DummyDataLogin /> */}
     {/* <SideMenuUpload /> */}
-    <UploadsTableData />
+    {/* <UploadsTableData /> */}
 
   </React.StrictMode>
 );
