@@ -54,7 +54,7 @@ const Login = () => {
                 <SideMenuUpload />
             ) : (
                 <div className="flex flex-col sm:flex-row">
-                    <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen' style={{ clipPath: window.innerWidth > 500 ? 'polygon(80% 100%, 0 100%, 0 0, 100% 0)' : 'none' }}>
+                    <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen' style={{ clipPath: clipPath }}>
 
                         {/* <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen' style={{ clipPath: clipPathStyle }}> */}
 
