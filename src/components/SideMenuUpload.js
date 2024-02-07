@@ -45,7 +45,7 @@ const SideMenuUpload = () => {
                                             <div className='flex flex-col gap-4 items-center p-4'>
                                                 <ul className="space-y-2 font-medium pt-8">
                                                     <li className='pb-2'>
-                                                        <button className="flex w-full items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-red-300 dark:hover:bg-gray-700 group">
+                                                        <button className="flex w-full items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group">
 
                                                             <img src={dashboards} width={20} alt="dashboard" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Dashboard</span>
