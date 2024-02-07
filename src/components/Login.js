@@ -47,17 +47,15 @@ const Login = () => {
         window.addEventListener('resize', updateClipPath);
 
         return () => window.removeEventListener('resize', updateClipPath);
-    }, []);
+    }, [clipPath]);
+
     return (
         <div className='h-screen flex flex-col w-full'>
             {loggedIn ? (
                 <SideMenuUpload />
             ) : (
                 <div className="flex flex-col sm:flex-row">
-                    <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen' style={{ clipPath: clipPath }}>
-
-                        {/* <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen' style={{ clipPath: clipPathStyle }}> */}
-
+                    <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen' style={{ clipPath: window.innerWidth > 500 ? 'polygon(80% 100%, 0 100%, 0 0, 100% 0)' : 'none' }}>
                         <div className='flex justify-between items-center p-4'>
                             <div className='hidden sm:block'>
                                 <img src={logo} alt="Logo" width={80} />

@@ -22,7 +22,7 @@ const SideMenuUpload = () => {
     };
     const handleLogout = () => {
         localStorage.setItem('loggedIn', false);
-        window.location.reload(); 
+        window.location.reload();
     };
     return (
         <>
@@ -45,50 +45,50 @@ const SideMenuUpload = () => {
                                             <div className='flex flex-col gap-4 items-center p-4'>
                                                 <ul className="space-y-2 font-medium pt-8">
                                                     <li className='pb-2'>
-                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <button className="flex w-full items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-red-300 dark:hover:bg-gray-700 group">
 
                                                             <img src={dashboards} width={20} alt="dashboard" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Dashboard</span>
                                                         </button>
                                                     </li>
                                                     <li className='pb-2'>
-                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group">
                                                             <img src={upload} width={20} alt="upload" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Upload</span>
                                                         </button>
                                                     </li>
                                                     <li className='pb-2'>
-                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group">
                                                             <img src={invoice} width={20} alt="invoice" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Invoice</span>
                                                         </button>
                                                     </li>
                                                     <li className='pb-2'>
-                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group">
                                                             <img src={schedule} width={20} alt="schedule" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Schedule</span>
                                                         </button>
                                                     </li>
                                                     <li className='pb-2'>
-                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group">
                                                             <img src={calendar} width={20} alt="calendar" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Calendar</span>
                                                         </button>
                                                     </li>
                                                     <li className='pb-2'>
-                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group">
                                                             <img src={notification} width={20} alt="notification" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Notifications</span>
                                                         </button>
                                                     </li>
                                                     <li className='pb-2'>
-                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group">
                                                             <img src={setting} width={20} alt="setting" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Settings</span>
                                                         </button>
                                                     </li>
                                                     <li className='pb-2'>
-                                                         <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" onClick={handleLogout}>
+                                                        <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 group" onClick={handleLogout}>
                                                             <img src={logout} width={20} alt="logout" />
                                                             <span className="ms-3 text-[#9A9AA9] font-semibold">Logout</span>
                                                         </button>
@@ -117,56 +117,56 @@ const SideMenuUpload = () => {
                         </ol>
                     </div>
 
-                    <div className=" flex px-[50px] hidden  sm:block  ">
+                    <div className=" flex px-[50px] hidden  sm:block   ">
 
                         <ul className="space-y-2 font-medium pt-8">
                             <li className='pb-2'>
-                                <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <button className="flex  items-center p-2 w-full text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <img src={dashboards} width={20} alt="dashboard" />
                                     <span className="ms-3 text-[#9A9AA9] font-semibold">Dashboard</span>
                                 </button>
                             </li>
                             <li className='pb-2'>
-                                <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <button className="flex   items-center p-2 w-full text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <img src={upload} width={20} alt="upload" />
-                                    <span className="ms-3 text-[#9A9AA9] font-semibold">Upload</span>
+                                    <span className="ms-3  text-[#9A9AA9] font-semibold">Upload</span>
                                 </button>
                             </li>
                             <li className='pb-2'>
-                                <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <button className="flex items-center p-2 w-full text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <img src={invoice} width={20} alt="invoice" />
                                     <span className="ms-3 text-[#9A9AA9] font-semibold">Invoice</span>
                                 </button>
                             </li>
                             <li className='pb-2'>
-                                <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <button className="flex items-center p-2 w-full text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <img src={schedule} width={20} alt="schedule" />
                                     <span className="ms-3 text-[#9A9AA9] font-semibold">Schedule</span>
                                 </button>
                             </li>
                             <li className='pb-2'>
-                                <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <button className="flex items-center p-2 w-full text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <img src={calendar} width={20} alt="calendar" />
                                     <span className="ms-3 text-[#9A9AA9] font-semibold">Calendar</span>
                                 </button>
                             </li>
                             <li className='pb-2'>
-                                <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <button className="flex items-center p-2 w-full text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <img src={notification} width={20} alt="notification" />
                                     <span className="ms-3 text-[#9A9AA9] font-semibold">Notifications</span>
                                 </button>
                             </li>
                             <li className='pb-2'>
-                                <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <button className="flex items-center p-2 text-gray-900 w-full rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <img src={setting} width={20} alt="setting" />
                                     <span className="ms-3 text-[#9A9AA9] font-semibold">Settings</span>
                                 </button>
                             </li>
                             <li className='pb-2'>
-                            <button className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" onClick={handleLogout}>
-                                <img src={logout} width={20} alt="logout" />
-                                <span className="ms-3 text-[#9A9AA9] font-semibold">Logout</span>
-                            </button>
+                                <button className="flex items-center w-full p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" onClick={handleLogout}>
+                                    <img src={logout} width={20} alt="logout" />
+                                    <span className="ms-3 text-[#9A9AA9] font-semibold">Logout</span>
+                                </button>
                             </li>
                         </ul>
                     </div >
