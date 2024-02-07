@@ -38,7 +38,8 @@ const Login = () => {
                 <SideMenuUpload />
             ) : (
                 <div className="flex flex-col sm:flex-row">
-                    <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen'>
+                    <div className='bg-[#605BFF] w-[100%] sm:w-1/2 flex flex-col h-[50px] sm:h-screen' style={{ clipPath: window.innerWidth > 500 ? 'polygon(80% 100%, 0 100%, 0 0, 100% 0)' : 'none' }}>
+
                         <div className='flex justify-between items-center p-4'>
                             <div className='hidden sm:block'>
                                 <img src={logo} alt="Logo" width={80} />
@@ -120,6 +121,7 @@ const Login = () => {
 
                 </div>
             )}
+            {!loggedIn &&(
             <div className='sm:bg-[#F8FAFF] w-full items-center justify-center block sm:hidden'>
                 <div>
                     <p className='font-bold text-2xl sm:text-4xl text-left pt-[20px] pl-[28px]'>Sign In</p>
@@ -194,6 +196,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            )}
         </div >
     );
 }

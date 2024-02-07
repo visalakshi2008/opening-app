@@ -34,10 +34,14 @@ const UploadsTableData = ({ data }) => {
 
     return (
         <div className='w-[85%] justify-center'>
-            <p className='text-2xl pt-[48px] font-semibold sm:font-bold pb-[23px] sm:pb-[46px] pl-[20px]'>Uploads</p>
+            {data && data.length > 0 && (
+                <p className='text-2xl pt-[48px] font-semibold sm:font-bold pb-[23px] sm:pb-[46px] pl-[20px]'>Uploads</p>
+            )}
             <div className="overflow-x-auto w-full">
+            {data && data.length > 0 && (
 
                 <table className="min-w-full bg-white border rounded shadow-md">
+                    
                     <thead>
                         <tr>
                             <th className="py-2 px-4 border-b text-back font-semibold">Sl.No</th>
@@ -92,6 +96,8 @@ const UploadsTableData = ({ data }) => {
                         ))}
                     </tbody>
                 </table>
+                )}
+
             </div>
         </div>
     );

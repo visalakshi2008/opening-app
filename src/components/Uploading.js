@@ -55,7 +55,6 @@ const Uploading = () => {
                 <div>
                     <p className='text-2xl font-semibold text-[#000000]'>Upload csv</p>
                 </div>
-                {/* mobile view header */}
 
                 <div className=' flex justify-between items-center text-center space-x-2 gap-3 sm:flex hidden sm:block'>
                     <img src={notification} width={18} alt="Bell Icon" />
